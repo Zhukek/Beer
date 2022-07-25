@@ -1,0 +1,19 @@
+.root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(52, 43, 43);
+  color: wheat;
+  min-width: 560px;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 150px 0 100px 0;
+}
+
+.notFound {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+}

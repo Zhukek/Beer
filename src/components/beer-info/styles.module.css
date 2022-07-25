@@ -1,0 +1,75 @@
+.root {
+  margin: 0 auto;
+  width: 70%;
+  display: grid;
+  grid-template-areas: 
+  "image name name"
+  "image description description"
+  "image tagline abv"
+  "image pairing pairing";
+  grid-template-columns: fit-content fit-content 1fr;
+  column-gap: 40px;
+  grid-template-rows: fit-content 1fr 50px;
+  row-gap: 15px;
+}
+
+@media screen and (max-width: 880px) {
+  .root {
+    grid-template-areas: 
+    "image"
+    "name"
+    "description"
+    "tagline"
+    "abv"
+    "pairing";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .image {
+    justify-self: center;
+    height: 300px;
+  }
+}
+
+.image {
+  height: 450px;
+  grid-area: image;
+}
+
+.description {
+  margin: 0;
+  grid-area: description;
+  font-size: 22px;
+  color: rgb(243, 230, 205);
+}
+
+.name {
+  margin: 0;
+  padding: 0;
+  font-size: 38px;
+  font-weight: 700;
+  color: rgb(205, 177, 166);
+  grid-area: name;
+}
+
+.infoText {
+  font-size: 18px;
+  color: rgb(243, 230, 205);
+}
+
+.abv {
+  composes: infoText;
+  grid-area: abv;
+}
+
+.tagline {
+  composes: infoText;
+  grid-area: tagline;
+}
+
+.pairing {
+  composes: infoText;
+  grid-area: pairing;
+  margin: 0 0 30px;
+}
